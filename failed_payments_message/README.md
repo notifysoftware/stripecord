@@ -4,8 +4,9 @@ Cardholder will receive a direct message and get notified when it happens.
 
 ### Prerequisites
 
-* Discord bot token, make sure to add the bot to your server. [Discord Developer Portal](https://discord.com/developers/applications/)
+* Discord bot token, make sure to add the bot to your server.
 * Discord channel for logging purposes.
+* [Hyper](https://hyper.co) account and secret key.
 * Heroku application.
 * Stripe webhook and signing secret. Use <https://your-app.herokuapp.com> as endpoint URL.
 
