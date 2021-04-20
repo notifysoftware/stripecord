@@ -28,7 +28,7 @@ def stripe_endpoint():
 			body, signature_header, STRIPE_WEBHOOK_SECRET
 		)
 
-		if event['type'] == 'invoice.payment_failed':
+		if event['type'] == 'charge.failed':
 			customer_id = event['data']['object']['customer']
 			customer_id = 'cus_JL5M2DGLAqhmrC'
 
