@@ -15,8 +15,8 @@ app = Flask(__name__)
 stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_WEBHOOK_SECRET = os.environ.get('STRIPE_ENDPOINT_SECRET')
 HYPER_SECRET_KEY = os.environ.get('HYPER_SECRET_KEY')
-BOT_TOKEN = os.environ.get('BOT_TOKEN')
-LOG_CHANNEL = os.environ.get('LOG_CHANNEL')
+DISCORD_BOT_TOKEN = os.environ.get('DISCORD_BOT_TOKEN')
+DISCORD_CHANNEL_ID = os.environ.get('DISCORD_CHANNEL_ID')
 
 @app.route('/', methods=['POST'])
 def stripe_endpoint():
@@ -44,7 +44,7 @@ def stripe_endpoint():
 					if user:
 						content = '[Payment Failed] '
 						messaged = message_user(
-							token=BOT_TOKEN,
+							token=DISCORD_BOT_TOKEN,
 							user=user['id'],
 							content='Your payment method on file has failed.'
 						)
@@ -54,8 +54,8 @@ def stripe_endpoint():
 							content += 'Failed to message '
 
 						message_channel(
-							token=BOT_TOKEN,
-							channel=LOG_CHANNEL,
+							token=DISCORD_BOT_TOKEN,
+							channel=DISCORD_CHANNEL_ID,
 							content=content + '**{}#{}**'.format(user['username'], user['discriminator'])
 						)
 
