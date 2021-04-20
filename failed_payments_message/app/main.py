@@ -30,7 +30,6 @@ def stripe_endpoint():
 
 		if event['type'] == 'charge.failed':
 			customer_id = event['data']['object']['customer']
-			customer_id = 'cus_JL5M2DGLAqhmrC'
 
 			headers = {
 				'Authorization': f'Bearer {HYPER_SECRET_KEY}'
