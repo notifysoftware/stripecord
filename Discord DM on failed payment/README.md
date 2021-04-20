@@ -7,7 +7,7 @@ Easily receive Stripe events in a Discord channel.
 * Discord bot token, make sure to add the bot to your server. [Discord Developer Portal](https://discord.com/developers/applications/)
 * Discord channel for logging purposes.
 * Heroku application.
-* Stripe webhook and signing secret. Use https://your-app.herokuapp.com as endpoint URL.
+* Stripe webhook and signing secret. Use <https://your-app.herokuapp.com> as endpoint URL.
 
 ### Setup
 
