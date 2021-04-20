@@ -1,6 +1,6 @@
-# StripeCord
+# StripeCord - Message Cardholder on Failed Payment
 
-Easily receive Stripe events in a Discord channel.
+Cardholder will receive a direct message and get notified when it happens.
 
 ### Prerequisites
 

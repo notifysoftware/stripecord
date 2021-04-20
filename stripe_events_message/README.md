@@ -1,4 +1,4 @@
-# StripeCord
+# StripeCord - Stripe Events to Discord Webhook
 
 Easily receive Stripe events in a Discord channel.
 
